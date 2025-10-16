@@ -1,0 +1,63 @@
+/* Base styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+  text-align: center;
+}
+
+header, footer {
+  background: #68bade;
+  color: #fff;
+  padding: 1rem;
+}
+
+main {
+  padding: 20px;
+}
+
+.carousel-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+.carousel-container img {
+  max-width: 100%;
+  border-radius: 8px;
+}
+.carousel-container button {
+  background: #33333386;
+  color: white;
+  border: none;
+  font-size: 2rem;
+  cursor: pointer;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+}
+.carousel-container button:hover {
+  background: #555;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  header h1 {
+    font-size: 1.8rem;
+  }
+  .carousel-container img {
+    width: 90%;
+  }
+}
+
+@media (max-width: 480px) {
+  header h1 {
+    font-size: 1.4rem;
+  }
+  .carousel-container {
+    flex-direction: column;
+  }
+  .carousel-container button {
+    font-size: 1.5rem;
+  }
+}
