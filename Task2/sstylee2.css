@@ -1,0 +1,118 @@
+/* General Styling */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #f5f9f9;
+  color: #333;
+}
+
+header {
+  background: #035d4d;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+}
+
+h2 {
+  margin: 0.5rem 0;
+}
+
+section {
+  padding: 20px;
+}
+
+/* Contact Form */
+form {
+  max-width: 400px;
+  margin: 20px auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  background: white;
+}
+
+form input, form button {
+  width: 100%;
+  padding: 10px;
+  margin: 8px 0;
+  border: 1px solid #aaa;
+  border-radius: 5px;
+}
+
+form button {
+  background: #035d4d;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+form button:hover {
+  background: #028c70;
+}
+
+/* Responsive Layout */
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.box {
+  flex: 1 1 200px;
+  background: #e2f1ef;
+  padding: 20px;
+  text-align: center;
+  border-radius: 10px;
+}
+
+/* To-Do List */
+.todo {
+  max-width: 400px;
+  margin: 20px auto;
+  padding: 20px;
+  background: white;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+}
+
+.todo input {
+  width: 70%;
+  padding: 8px;
+}
+
+.todo button {
+  padding: 8px 12px;
+  background: #035d4d;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.todo ul {
+  margin-top: 15px;
+  padding: 0;
+  list-style: none;
+}
+
+.todo li {
+  display: flex;
+  justify-content: space-between;
+  padding: 8px;
+  background: #e2f1ef;
+  margin: 5px 0;
+  border-radius: 5px;
+}
+
+.remove {
+  color: red;
+  cursor: pointer;
+}
+
+/* Media Query for Mobile */
+@media(max-width: 600px) {
+  .container {
+    flex-direction: column;
+  }
+}

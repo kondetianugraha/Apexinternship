@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Intermediate HTML, CSS, and JavaScript</title>
+  <link rel="stylesheet" href="sstylee2.css">
+</head>
+<body>
+
+  <header>
+    <h2>Intermediate HTML, CSS, and JavaScript</h2>
+    <p>Task - 2 | Timeline: 9 Days</p>
+  </header>
+
+  <section>
+    <!-- Contact Form -->
+    <h3>1. Contact Form</h3>
+    <form id="contactForm">
+      <input type="text" id="name" placeholder="Your Name" required>
+      <input type="email" id="email" placeholder="Your Email" required>
+      <input type="password" id="password" placeholder="Password" required>
+      <button type="submit">Submit</button>
+    </form>
+
+    <!-- Responsive Layout -->
+    <h3>2. Responsive Layout (Flexbox + Grid)</h3>
+    <div class="container">
+      <div class="box">Box 1</div>
+      <div class="box">Box 2</div>
+      <div class="box">Box 3</div>
+    </div>
+
+    <!-- To-Do List -->
+    <h3>3. Dynamic To-Do List</h3>
+    <div class="todo">
+      <input type="text" id="taskInput" placeholder="Enter a task">
+      <button onclick="addTask()">Add Task</button>
+      <ul id="taskList"></ul>
+    </div>
+  </section>
+
+  <script>
+    // JavaScript Form Validation
+    document.getElementById("contactForm").addEventListener("submit", function(e) {
+      e.preventDefault();
+      let email = document.getElementById("email").value;
+      let regex = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
+
+      if (!regex.test(email)) {
+        alert("Invalid Email Format!");
+      } else {
+        alert("Form Submitted Successfully!");
+      }
+    });
+
+    // To-Do List
+    function addTask() {
+      let input = document.getElementById("taskInput");
+      let task = input.value.trim();
+
+      if (task === "") {
+        alert("Enter a task!");
+        return;
+      }
+
+      let li = document.createElement("li");
+      li.innerHTML = `${task} <span class="remove" onclick="this.parentElement.remove()">X</span>`;
+      document.getElementById("taskList").appendChild(li);
+      input.value = "";
+    }
+  </script>
+
+</body>
+</html>
